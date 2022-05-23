@@ -1,11 +1,7 @@
-import './MovieList.css'
+import "./MovieList.css";
 
 const MovieList = () => {
-  return (
-    <div className='MovieList'>
-        MovieList works
-    </div>
-  )
+  return <div className="MovieList"></div>;
 };
 
 export default MovieList;
