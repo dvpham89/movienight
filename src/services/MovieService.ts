@@ -1,5 +1,5 @@
 import axios from "axios";
-import DetailMovieResponse from "../models/DetailMovieResponse";
+import MovieModel from "../models/MovieModel";
 import TrendingMoviesResponse from "../models/TrendingMoviesResponse";
 
 const apiKey: string = process.env.REACT_APP_GIPHY_API_KEY || "";
@@ -15,9 +15,9 @@ export const getTrendingMovies = (): Promise<TrendingMoviesResponse> => {
   );
 };
 
-export const getMovieById = (id: number): Promise<DetailMovieResponse> => {
+export const getMovieById = (id: number): Promise<MovieModel> => {
   return axios
-    .get(`https://api.giphy.com/v1/gifs/${encodeURIComponent(id)}`, {
+    .get(`https://api.themoviedb.org/3/movie/${encodeURIComponent(id)}`, {
       params: {
         api_key: apiKey,
       },

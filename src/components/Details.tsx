@@ -10,16 +10,25 @@ const Details = () => {
 
   useEffect(() => {
     getMovieById(+id).then((res) => {
-      setMovie(res.movie);
+      console.log(res);
+      setMovie(res);
     });
   }, [id]);
 
   return (
     <div className="Details">
-      <img src={movie?.poster_path} alt={movie?.title} />
+      <img
+        src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
+        alt={movie?.title}
+      />
       <p>{movie?.title}</p>
       <p>{movie?.vote_average}</p>
       <p>{movie?.overview}</p>
+      <img
+        className="back-drop"
+        src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
+        alt={movie?.title}
+      />
     </div>
   );
 };

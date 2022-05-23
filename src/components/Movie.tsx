@@ -16,10 +16,10 @@ const Movie = ({ movie }: Props) => {
   return (
     <li className="Movie">
       <img
-        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+        src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
         alt={movie.title}
       />
-      <Link to="/details/:id">
+      <Link to={`/details/${movie.id}`}>
         <h2>{movie.title}</h2>
       </Link>
       {isWatchList ? (
