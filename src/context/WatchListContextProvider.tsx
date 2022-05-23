@@ -22,9 +22,14 @@ const WatchListContextProvider = ({ children }: Props) => {
     });
   };
 
+  const isOnWatchList = (id: number): boolean => {
+    return watchList.some((mov) => {
+      return mov.id === id;
+    });
+  };
   return (
     <WatchListContext.Provider
-      value={{ watchList, addWatchList, deleteWatchList }}
+      value={{ watchList, addWatchList, deleteWatchList, isOnWatchList }}
     >
       {children}
     </WatchListContext.Provider>
