@@ -1,24 +1,26 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./component/Header";
-import MovieList from "./component/MovieList";
-import { getTrendingMovies } from "./services/MovieService";
-import MovieModel from "./models/MovieModel";
+import Header from "./components/Header";
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Details from "./components/Details";
+import WatchList from "./components/WatchList";
+import Main from "./components/Main";
 
 function App() {
-  const [movieList, setMovieList] = useState<MovieModel[]>([]);
-
-  useEffect(() => {
-    getTrendingMovies().then((res) => {
-      setMovieList(res.results);
-    });
-  }, []);
-
   return (
     <div className="App">
-      <Header />
-      <MovieList movieList={movieList} />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/details/:id" element={<Details />} />
+          <Route path="/watchList" element={<WatchList />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
