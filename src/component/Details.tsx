@@ -1,18 +1,19 @@
 import MovieModel from "../models/MovieModel";
-import "./Movie.css";
+import "./Details.css";
 
 interface Props {
   movie: MovieModel;
 }
 
-const Movie = ({ movie }: Props) => {
+const Details = ({ movie }: Props) => {
   return (
-    <li className="Movie">
+    <div className="Details">
       <img src={movie.poster_path} alt={movie.title} />
       <p>{movie.title}</p>
       <p>{movie.vote_average}</p>
-    </li>
+      <p>{movie.overview}</p>
+    </div>
   );
 };
 
-export default Movie;
+export default Details;
