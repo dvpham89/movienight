@@ -1,9 +1,9 @@
-import Movie from "../models/Movie";
+import MovieModel from "../models/MovieModel";
 import Movie from "./Movie";
 import "./MovieList.css";
 
 interface Props {
-  movieList: Movie[];
+  movieList: MovieModel[];
 }
 
 const MovieList = ({ movieList }: Props) => {

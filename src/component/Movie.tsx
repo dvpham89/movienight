@@ -1,8 +1,8 @@
-import Movie from "../models/Movie";
+import MovieModel from "../models/MovieModel";
 import "./Movie.css";
 
 interface Props {
-  movie: Movie;
+  movie: MovieModel;
 }
 
 const Movie = ({ movie }: Props) => {

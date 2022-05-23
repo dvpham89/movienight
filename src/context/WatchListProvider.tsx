@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import Movie from "../models/Movie";
+import MovieModel from "../models/MovieModel";
 import WatchListContext from "./WatchListContext";
 
 interface Props {
@@ -7,10 +7,25 @@ interface Props {
 }
 
 const WatchListContextProvider = ({ children }: Props) => {
-  const [watchList, setWatchList] = useState<Movie[]>([]);
+  const [watchList, setWatchList] = useState<MovieModel[]>([]);
+
+  const addWatchList = (movie: MovieModel): void => {
+    setWatchList((prev) => {
+      return [...prev, movie];
+    });
+  };
+
+  const deleteWatchList = (id: number): void => {
+    setWatchList((prev) => {
+      const index: number = prev.findIndex((movie) => movie.id === id);
+      return [...prev.slice(0, index), ...prev.slice(index + 1)];
+    });
+  };
 
   return (
-    <WatchListContext.Provider value={{ watchList }}>
+    <WatchListContext.Provider
+      value={{ watchList, addWatchList, deleteWatchList }}
+    >
       {children}
     </WatchListContext.Provider>
   );

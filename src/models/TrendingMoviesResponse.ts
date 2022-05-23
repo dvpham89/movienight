@@ -1,5 +1,5 @@
-import Movie from "./Movie";
+import MovieModel from "./MovieModel";
 
 export default interface TrendingMoviesResponse {
-  results: Movie[];
+  results: MovieModel[];
 }

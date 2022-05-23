@@ -4,10 +4,10 @@ import "./App.css";
 import Header from "./component/Header";
 import MovieList from "./component/MovieList";
 import { getTrendingMovies } from "./services/MovieService";
-import Movie from "./models/Movie";
+import MovieModel from "./models/MovieModel";
 
 function App() {
-  const [movieList, setMovieList] = useState<Movie[]>([]);
+  const [movieList, setMovieList] = useState<MovieModel[]>([]);
 
   useEffect(() => {
     getTrendingMovies().then((res) => {

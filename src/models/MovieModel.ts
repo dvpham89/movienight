@@ -1,4 +1,4 @@
-export default interface Movie {
+export default interface MovieModel {
   genre_ids: [];
   id: number;
   overview: string;
