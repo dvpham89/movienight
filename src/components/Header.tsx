@@ -3,7 +3,7 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="Header">
+    <header className="Header">
       <h1>
         <Link to="/">Movie Night</Link>
       </h1>
@@ -12,7 +12,7 @@ const Header = () => {
           <i className="fa-solid fa-list"> Watch List</i>
         </Link>
       </p>
-    </div>
+    </header>
   );
 };
 
