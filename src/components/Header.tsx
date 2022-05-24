@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
+import SearchForm from "./SearchForm";
 
 const Header = () => {
   return (
