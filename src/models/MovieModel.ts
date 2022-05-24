@@ -1,9 +1,8 @@
 export default interface MovieModel {
-  genre_ids: [];
   id: number;
-  overview: string;
   poster_path: string;
   title: string;
+  overview: string;
   vote_average: number;
   backdrop_path: string;
 }
