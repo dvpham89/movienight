@@ -1,5 +1,5 @@
 import MovieModel from "./MovieModel";
 
-export default interface TrendingMoviesResponse {
+export default interface MoviesResponse {
   results: MovieModel[];
 }

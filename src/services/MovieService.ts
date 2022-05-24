@@ -1,18 +1,19 @@
 import axios from "axios";
 import MovieModel from "../models/MovieModel";
-import TrendingMoviesResponse from "../models/TrendingMoviesResponse";
+import MoviesResponse from "../models/MoviesResponse";
 
 const apiKey: string = process.env.REACT_APP_GIPHY_API_KEY || "";
 
-export const getTrendingMovies = (): Promise<TrendingMoviesResponse> => {
-  return (
-    axios
-      .get(`https://api.themoviedb.org/3/discover/movie`, {
+export const getTrendingMovies = (): Promise<MoviesResponse> => {
+  return axios
+    .get(
+      `
+    https://api.themoviedb.org/3/trending/movie/week`,
+      {
         params: { api_key: apiKey },
-      })
-      // always return res.data with axios
-      .then((res) => res.data)
-  );
+      }
+    )
+    .then((res) => res.data);
 };
 
 export const getMovieById = (id: number): Promise<MovieModel> => {
@@ -23,4 +24,21 @@ export const getMovieById = (id: number): Promise<MovieModel> => {
       },
     })
     .then((res) => res.data);
+};
+
+export const getMovieByTitle = (
+  searchTerm: string
+): Promise<MoviesResponse> => {
+  return axios
+    .get(`https://api.themoviedb.org/3/search/multi`, {
+      params: {
+        api_key: apiKey,
+        query: encodeURIComponent(searchTerm),
+      },
+    })
+    .then((res) => {
+      console.log(res);
+
+      return res.data;
+    });
 };
