@@ -7,24 +7,59 @@ interface Props {
 
 const SearchForm = ({ updateSearchTerm }: Props) => {
   const [search, setSearch] = useState("");
+  const [inputType, setInputType] = useState("title");
 
   const submitHandler = (e: FormEvent): void => {
     e.preventDefault();
-    updateSearchTerm(search);
-    setSearch("");
+    if (inputType === "title") {
+      updateSearchTerm(search);
+      setSearch("");
+    }
   };
 
   return (
     <form className="SearchForm" onSubmit={submitHandler}>
-      <label htmlFor="search">Search</label>
-      <input
-        type="text"
-        name="search"
-        id="search"
-        onChange={(e) => setSearch(e.target.value)}
-        value={search}
-      />
-      <button>Search</button>
+      <div>
+        <p
+          className={inputType === "title" ? "selected" : ""}
+          onClick={() => setInputType("title")}
+        >
+          Title
+        </p>
+        <p
+          className={inputType === "ratingDate" ? "selected" : ""}
+          onClick={() => setInputType("ratingDate")}
+        >
+          Rating or Release Date
+        </p>
+      </div>
+      {inputType === "title" && (
+        <div>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            onChange={(e) => setSearch(e.target.value)}
+            value={search}
+          />
+          <button>Search</button>
+        </div>
+      )}
+      {inputType === "ratingDate" && (
+        <div>
+          <select name="rating" id="rating">
+            <option value="1">1 Star</option>
+            <option value="1">1 Star</option>
+            <option value="1">1 Star</option>
+            <option value="1">1 Star</option>
+            <option value="1">1 Star</option>
+          </select>
+          <select name="date" id="date">
+            <option value=""></option>
+          </select>
+          <button>Search</button>
+        </div>
+      )}
     </form>
   );
 };
