@@ -30,7 +30,7 @@ export const getMovieByTitle = (
   searchTerm: string
 ): Promise<MoviesResponse> => {
   return axios
-    .get(`https://api.themoviedb.org/3/search/multi`, {
+    .get(`https://api.themoviedb.org/3/search/movie`, {
       params: {
         api_key: apiKey,
         query: encodeURIComponent(searchTerm),
