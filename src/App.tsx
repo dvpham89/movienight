@@ -9,6 +9,7 @@ import {
 import Details from "./components/Details";
 import WatchList from "./components/WatchList";
 import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/details/:id" element={<Details />} />
           <Route path="/watchList" element={<WatchList />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

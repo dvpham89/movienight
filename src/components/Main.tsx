@@ -27,7 +27,9 @@ const Main = () => {
 
   return (
     <div className="Main">
-      <SearchForm updateSearchTerm={updatedSearchTerm} />
+      <div>
+        <SearchForm updateSearchTerm={updatedSearchTerm} />
+      </div>
       <MovieList movieList={movieList} />
     </div>
   );

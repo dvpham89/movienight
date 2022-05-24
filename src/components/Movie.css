@@ -1,3 +1,25 @@
+.Movie {
+  height: 600px;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.Movie a {
+  text-decoration: none;
+  color: white;
+}
+
 .Movie .wL {
-  color: red;
+  color: lightskyblue;
+}
+
+.Movie a:hover,
+.Movie i:hover {
+  color: violet;
+  cursor: pointer;
 }

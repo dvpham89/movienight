@@ -36,9 +36,20 @@ export const getMovieByTitle = (
         query: encodeURIComponent(searchTerm),
       },
     })
-    .then((res) => {
-      console.log(res);
+    .then((res) => res.data);
+};
 
-      return res.data;
-    });
+export const getMoviesByRatingOrDate = (
+  rating: number,
+  releaseDate: string
+): Promise<MoviesResponse> => {
+  return axios
+    .get(`https://api.themoviedb.org/3/discover/movie`, {
+      params: {
+        api_key: apiKey,
+        vote_average: rating,
+        release_date: releaseDate,
+      },
+    })
+    .then((res) => res.data);
 };
