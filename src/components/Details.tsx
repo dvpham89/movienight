@@ -16,21 +16,27 @@ const Details = () => {
   }, [id]);
 
   return (
-    <div className="Details">
-      <img
-        className="poster"
-        src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
-        alt={movie?.title}
-      />
-      <p>{movie?.title}</p>
-      <p>{movie?.vote_average}</p>
-      <p>{movie?.overview}</p>
-      <img
-        className="back-drop"
-        src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
-        alt={movie?.title}
-      />
-    </div>
+    <>
+      {movie ? (
+        <div className="Details">
+          <img
+            className="poster"
+            src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`}
+            alt={movie?.title}
+          />
+          <p>{movie?.title}</p>
+          <p>{movie?.vote_average}</p>
+          <p>{movie?.overview}</p>
+          <img
+            className="back-drop"
+            src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
+            alt={movie?.title}
+          />
+        </div>
+      ) : (
+        <p>Loading</p>
+      )}
+    </>
   );
 };
 

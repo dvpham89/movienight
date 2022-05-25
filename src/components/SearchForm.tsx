@@ -66,11 +66,11 @@ const SearchForm = ({
             onChange={(e) => setSearchRating(e.target.value)}
             value={searchRating}
           >
-            <option value="2">1 Star</option>
-            <option value="4">2 Star</option>
-            <option value="6">3 Star</option>
+            <option value="10">5 Star</option>
             <option value="8">4 Star</option>
-            <option value="9.5">5 Star</option>
+            <option value="6">3 Star</option>
+            <option value="4">2 Star</option>
+            <option value="2">1 Star</option>
           </select>
           <input
             type="date"
