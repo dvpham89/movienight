@@ -14,12 +14,16 @@
   color: white;
 }
 
-.Movie .wL {
-  color: lightskyblue;
+.Movie .addWL {
+  color: lightgreen;
+}
+
+.Movie .removeWL {
+  color: lightcoral;
 }
 
 .Movie a:hover,
 .Movie i:hover {
-  color: violet;
+  color: lightblue;
   cursor: pointer;
 }

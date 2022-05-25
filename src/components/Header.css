@@ -1,20 +1,28 @@
 .Header {
   width: 100%;
   height: 125px;
-  background-image: url("/src/assets/header-image.jpg");
+  background-image: url("/src/assets/header-bg-image.jpg");
   background-size: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.Header img {
+  width: 33%;
+}
+
 .Header a {
   color: white;
-  padding: 20px;
+  margin: 20px;
   text-decoration: none;
 }
 
 .Header a:hover {
-  color: lightseagreen;
+  color: lightskyblue;
   cursor: pointer;
+}
+
+.Header i {
+  font-size: 20px;
 }

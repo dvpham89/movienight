@@ -5,11 +5,16 @@ const Header = () => {
   return (
     <header className="Header">
       <h1>
-        <Link to="/">Movie Night</Link>
+        <Link to="/">
+          <img
+            src={require("../assets/movie-night-logo.gif")}
+            alt="movie-night"
+          />
+        </Link>
       </h1>
       <p>
         <Link to="/watchList">
-          <i className="fa-solid fa-list"> Watch List</i>
+          <i className="fa-solid fa-meteor"> Watch List</i>
         </Link>
       </p>
     </header>

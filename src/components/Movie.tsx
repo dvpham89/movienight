@@ -24,12 +24,19 @@ const Movie = ({ movie }: Props) => {
       </Link>
       {isWatchList ? (
         <i
-          className={`fa-solid fa-eye wL`}
+          className={`fa-solid fa-circle-minus removeWL`}
           onClick={() => deleteWatchList(movie.id)}
-        ></i>
+        >
+          {" "}
+          Remove from Watch List
+        </i>
       ) : (
-        <i className="fa-solid fa-eye" onClick={() => addWatchList(movie)}>
-          Add to Watchlist
+        <i
+          className="fa-solid fa-circle-plus addWL"
+          onClick={() => addWatchList(movie)}
+        >
+          {" "}
+          Add to Watch List
         </i>
       )}
 

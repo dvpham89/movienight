@@ -1,8 +1,9 @@
 .Details {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .Details .back-drop {
@@ -13,5 +14,17 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 75%;
+  opacity: 50%;
+}
+
+.Details .poster {
+  height: 200px;
+  margin: 20px;
+}
+
+.Details p {
+  font-size: larger;
+  font-weight: bold;
+  width: 50%;
+  margin: 5px;
 }

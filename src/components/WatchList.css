@@ -4,8 +4,11 @@
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.WatchList h2 {
+  margin: 20px;
 }
 
 .WatchList ul {
