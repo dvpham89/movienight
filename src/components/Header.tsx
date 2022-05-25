@@ -1,14 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 import movienight from "../assets/movie-night-logo.gif";
 
 const Header = () => {
+  const navigate = useNavigate();
+  const goHome = () => {
+    navigate("/");
+    window.location.reload();
+  };
   return (
     <header className="Header">
       <h1>
-        <Link to="/">
-          <img src={movienight} alt="movie-night" />
-        </Link>
+        <img src={movienight} alt="movie-night" onClick={goHome} />
       </h1>
       <p>
         <Link to="/watchList">
