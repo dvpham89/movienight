@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
+import movienight from "../assets/movie-night-logo.gif";
 
 const Header = () => {
   return (
     <header className="Header">
       <h1>
         <Link to="/">
-          <img
-            src={require("../assets/movie-night-logo.gif")}
-            alt="movie-night"
-          />
+          <img src={movienight} alt="movie-night" />
         </Link>
       </h1>
       <p>

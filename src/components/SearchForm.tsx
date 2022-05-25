@@ -49,10 +49,10 @@ const SearchForm = ({ updateSearchTerm }: Props) => {
         <div>
           <select name="rating" id="rating">
             <option value="1">1 Star</option>
-            <option value="1">1 Star</option>
-            <option value="1">1 Star</option>
-            <option value="1">1 Star</option>
-            <option value="1">1 Star</option>
+            <option value="2">2 Star</option>
+            <option value="3">3 Star</option>
+            <option value="4">4 Star</option>
+            <option value="5">5 Star</option>
           </select>
           <select name="date" id="date">
             <option value=""></option>

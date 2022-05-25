@@ -1,8 +1,7 @@
 .Footer {
-  width: 100%;
   position: fixed;
+  width: 100%;
   bottom: 0;
-  left: 0;
   background-image: url("/src/assets/header-bg-image.jpg");
   display: flex;
   justify-content: space-between;
@@ -10,11 +9,12 @@
   color: white;
 }
 
-.Footer img {
-  width: 25%;
-  padding: 10px;
+.Footer .tmdb {
+  height: 40px;
+  width: 40px;
+  margin: 10px;
 }
 
 .Footer p {
-  padding: 10px;
+  margin: 10px;
 }
