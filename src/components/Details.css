@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 .Details .back-drop {
@@ -21,6 +22,9 @@
   margin: 20px;
 }
 
+.Details h2 {
+  font-size: 80px;
+}
 .Details p {
   font-size: larger;
   font-weight: bold;

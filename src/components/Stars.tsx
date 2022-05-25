@@ -60,7 +60,7 @@ const Stars = ({ stars, color }: Props) => {
                 ? "url(#half)"
                 : stars >= 1.2
                 ? "url(#quarter)"
-                : "black"
+                : "transparent"
             }
             stroke={color}
             strokeWidth={"5px"}
@@ -90,7 +90,7 @@ const Stars = ({ stars, color }: Props) => {
                 ? "url(#half)"
                 : stars >= 2.2
                 ? "url(#quarter)"
-                : "black"
+                : "transparent"
             }
             stroke={color}
             strokeWidth={"5px"}
@@ -120,7 +120,7 @@ const Stars = ({ stars, color }: Props) => {
                 ? "url(#half)"
                 : stars >= 3.2
                 ? "url(#quarter)"
-                : "black"
+                : "transparent"
             }
             stroke={color}
             strokeWidth={"5px"}
@@ -150,7 +150,7 @@ const Stars = ({ stars, color }: Props) => {
                 ? "url(#half)"
                 : stars >= 4.2
                 ? "url(#quarter)"
-                : "black"
+                : "transparent"
             }
             stroke={color}
             strokeWidth={"5px"}
