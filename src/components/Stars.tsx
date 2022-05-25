@@ -27,15 +27,15 @@ const Stars = ({ stars, color }: Props) => {
         <defs>
           <linearGradient id="quarter">
             <stop offset="37%" stopColor={color} />
-            <stop offset="37%" stopColor="black" />
+            <stop offset="37%" stopColor="transparent" />
           </linearGradient>
           <linearGradient id="half">
             <stop offset="50%" stopColor={color} />
-            <stop offset="50%" stopColor="black" />
+            <stop offset="50%" stopColor="transparent" />
           </linearGradient>
           <linearGradient id="three-quarters">
             <stop offset="60%" stopColor={color} />
-            <stop offset="60%" stopColor="black" />
+            <stop offset="60%" stopColor="transparent" />
           </linearGradient>
         </defs>
         <g transform="matrix(1,0,0,1,-634.728,-382.568)">

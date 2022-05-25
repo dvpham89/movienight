@@ -11,7 +11,10 @@
 
 .Header img {
   width: 250px;
-  /* margin-bottom: 10px; */
+}
+
+.Header img:hover {
+  cursor: pointer;
 }
 
 .Header a {
@@ -34,8 +37,4 @@
     flex-direction: row;
     justify-content: space-between;
   }
-
-  /* .Header img {
-    margin-bottom: 0;
-  } */
 }

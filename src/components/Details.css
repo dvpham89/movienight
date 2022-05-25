@@ -27,3 +27,17 @@
   width: 50%;
   margin: 5px;
 }
+
+.Details a:hover,
+.Details i:hover {
+  color: lightblue;
+  cursor: pointer;
+}
+
+.Details .addWL {
+  color: lightgreen;
+}
+
+.Details .removeWL {
+  color: lightcoral;
+}
