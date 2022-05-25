@@ -1,8 +1,44 @@
 .SearchForm {
   margin-top: 20px;
+  text-align: center;
+}
+.SearchForm p {
+  background-color: teal;
+  border: solid 2px white;
+  margin: 2px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .SearchForm p:hover {
-  color: yellow;
+  background-color: peachpuff;
+  color: black;
   cursor: pointer;
+}
+
+.SearchForm .selected {
+  background-color: peachpuff;
+  color: black;
+}
+
+.SearchForm .filterBy {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.SearchForm input {
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 3px;
+}
+
+.SearchForm button {
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 3px;
+}
+
+.SearchForm button:hover {
+  color: white;
+  background-color: blue;
 }
