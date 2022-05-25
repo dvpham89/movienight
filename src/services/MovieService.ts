@@ -39,17 +39,29 @@ export const getMovieByTitle = (
     .then((res) => res.data);
 };
 
-export const getMoviesByRatingOrDate = (
-  rating: number,
+export const getMoviesByRating = (
+  rating: string,
   releaseDate: string
 ): Promise<MoviesResponse> => {
   return axios
     .get(`https://api.themoviedb.org/3/discover/movie`, {
       params: {
         api_key: apiKey,
-        vote_average: rating,
-        release_date: releaseDate,
+        "vote_average.gte": rating,
+        "release_date.gte": releaseDate,
       },
     })
     .then((res) => res.data);
 };
+// export const getMoviesByDate = (
+//   releaseDate: string,
+// ): Promise<MoviesResponse> => {
+//   return axios
+//     .get(`https://api.themoviedb.org/3/discover/movie`, {
+//       params: {
+//         api_key: apiKey,
+//         release_date: releaseDate,
+//       },
+//     })
+//     .then((res) => res.data);
+// };
