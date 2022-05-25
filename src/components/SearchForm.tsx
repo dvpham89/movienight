@@ -13,8 +13,8 @@ const SearchForm = ({
   updateSearchRating,
 }: Props) => {
   const [search, setSearch] = useState("");
-  const [inputType, setInputType] = useState("title");
-  const [searchRating, setSearchRating] = useState("2");
+  const [inputType, setInputType] = useState("");
+  const [searchRating, setSearchRating] = useState("10");
   const [searchDate, setSearchDate] = useState("");
 
   const submitHandler = (e: FormEvent): void => {
@@ -32,7 +32,8 @@ const SearchForm = ({
 
   return (
     <form className="SearchForm" onSubmit={submitHandler}>
-      <div>
+      <h2>Search By:</h2>
+      <div className="filterBy">
         <p
           className={inputType === "title" ? "selected" : ""}
           onClick={() => setInputType("title")}
@@ -43,7 +44,7 @@ const SearchForm = ({
           className={inputType === "ratingDate" ? "selected" : ""}
           onClick={() => setInputType("ratingDate")}
         >
-          Rating and Date
+          Rating / Date
         </p>
       </div>
       {inputType === "title" && (
