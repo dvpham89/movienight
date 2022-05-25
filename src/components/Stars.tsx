@@ -26,16 +26,16 @@ const Stars = ({ stars, color }: Props) => {
       >
         <defs>
           <linearGradient id="quarter">
-            <stop offset="37%" stop-color={color} />
-            <stop offset="37%" stop-color="black" />
+            <stop offset="37%" stopColor={color} />
+            <stop offset="37%" stopColor="black" />
           </linearGradient>
           <linearGradient id="half">
-            <stop offset="50%" stop-color={color} />
-            <stop offset="50%" stop-color="black" />
+            <stop offset="50%" stopColor={color} />
+            <stop offset="50%" stopColor="black" />
           </linearGradient>
           <linearGradient id="three-quarters">
-            <stop offset="60%" stop-color={color} />
-            <stop offset="60%" stop-color="black" />
+            <stop offset="60%" stopColor={color} />
+            <stop offset="60%" stopColor="black" />
           </linearGradient>
         </defs>
         <g transform="matrix(1,0,0,1,-634.728,-382.568)">
@@ -93,6 +93,7 @@ const Stars = ({ stars, color }: Props) => {
                 : "black"
             }
             stroke={color}
+            strokeWidth={"5px"}
             strokeLinecap="round"
             strokeLinejoin="round"
             d="M702.68,382.568L718.721,431.938L770.632,431.938L728.635,462.45L744.677,511.82L702.68,481.308L660.683,511.82L676.724,462.45L634.728,431.938L686.639,431.938L702.68,382.568Z"

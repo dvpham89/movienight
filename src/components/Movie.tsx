@@ -23,6 +23,13 @@ const Movie = ({ movie }: Props) => {
       <Link to={`/details/${movie.id}`}>
         <h2>{movie.title}</h2>
       </Link>
+
+      <p>{movie.release_date}</p>
+
+      <Stars stars={movie.vote_average / 2} color={"yellow"} />
+      <p>
+        {movie.vote_average / 2} Rating ({movie.vote_count} votes)
+      </p>
       {isWatchList ? (
         <i
           className={`fa-solid fa-circle-minus removeWL`}
@@ -40,10 +47,6 @@ const Movie = ({ movie }: Props) => {
           Add to Watch List
         </i>
       )}
-      <p>{movie.release_date}</p>
-
-      <p>{movie.vote_average}</p>
-      <Stars stars={movie.vote_average / 2} color={"yellow"} />
     </li>
   );
 };

@@ -48,7 +48,7 @@ export const getMoviesByRating = (
       params: {
         api_key: apiKey,
         "vote_average.gte": rating,
-        "release_date.gte": releaseDate,
+        "release_date.lte": releaseDate,
       },
     })
     .then((res) => res.data);

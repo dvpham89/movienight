@@ -1,3 +1,8 @@
 .SearchForm {
   margin-top: 20px;
 }
+
+.SearchForm p:hover {
+  color: yellow;
+  cursor: pointer;
+}
