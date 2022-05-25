@@ -54,9 +54,7 @@ const SearchForm = ({ updateSearchTerm }: Props) => {
             <option value="4">4 Star</option>
             <option value="5">5 Star</option>
           </select>
-          <select name="date" id="date">
-            <option value=""></option>
-          </select>
+          <input type="date" name="date" id="date" />
           <button>Search</button>
         </div>
       )}
