@@ -49,19 +49,8 @@ export const getMoviesByRating = (
         api_key: apiKey,
         "vote_average.gte": rating,
         "release_date.lte": releaseDate,
+        include_adult: false,
       },
     })
     .then((res) => res.data);
 };
-// export const getMoviesByDate = (
-//   releaseDate: string,
-// ): Promise<MoviesResponse> => {
-//   return axios
-//     .get(`https://api.themoviedb.org/3/discover/movie`, {
-//       params: {
-//         api_key: apiKey,
-//         release_date: releaseDate,
-//       },
-//     })
-//     .then((res) => res.data);
-// };
