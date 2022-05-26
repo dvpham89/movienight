@@ -1,5 +1,4 @@
 .WatchList {
-  height: 100%;
   background-color: black;
   color: white;
   display: flex;
@@ -20,7 +19,7 @@
 }
 
 .WatchList li {
-  height: 600px;
+  height: 650px;
   flex: 1;
   padding: 20px;
   display: flex;
@@ -31,16 +30,8 @@
 }
 
 @media only screen and (min-width: 768px) {
-  /* .WatchList {
-  
-} */
-
   .WatchList ul {
     flex-wrap: wrap;
     flex-direction: row;
   }
-
-  /* .WatchList li {
-  
-} */
 }

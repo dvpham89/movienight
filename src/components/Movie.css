@@ -1,5 +1,5 @@
 .Movie {
-  height: 600px;
+  height: 650px;
   flex: 1;
   padding: 20px;
   display: flex;
@@ -24,6 +24,6 @@
 
 .Movie a:hover,
 .Movie i:hover {
-  color: lightblue;
+  color: lightskyblue;
   cursor: pointer;
 }

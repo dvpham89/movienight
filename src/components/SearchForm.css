@@ -2,6 +2,7 @@
   margin-top: 20px;
   text-align: center;
 }
+
 .SearchForm p {
   background-color: teal;
   border: solid 2px white;
@@ -11,13 +12,13 @@
 }
 
 .SearchForm p:hover {
-  background-color: peachpuff;
+  background-color: lightcoral;
   color: black;
   cursor: pointer;
 }
 
 .SearchForm .selected {
-  background-color: peachpuff;
+  background-color: lightcoral;
   color: black;
 }
 
@@ -40,5 +41,5 @@
 
 .SearchForm button:hover {
   color: white;
-  background-color: blue;
+  background-color: lightskyblue;
 }
