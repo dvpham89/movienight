@@ -20,14 +20,23 @@ const SearchForm = ({
   const submitHandler = (e: FormEvent): void => {
     e.preventDefault();
     if (inputType === "title") {
+      updateSearchDate("");
+      updateSearchRating("");
       updateSearchTerm(search);
       setSearch("");
     } else if (inputType === "ratingDate") {
+      updateSearchTerm("");
       updateSearchRating(searchRating);
       updateSearchDate(searchDate);
       setSearchRating("");
       setSearchDate("");
     }
+  };
+
+  const resetQueries = () => {
+    updateSearchTerm("");
+    updateSearchDate("");
+    updateSearchRating("");
   };
 
   return (
@@ -46,6 +55,7 @@ const SearchForm = ({
         >
           Rating / Date
         </p>
+        <p onClick={resetQueries}>Reset</p>
       </div>
       {inputType === "title" && (
         <div>

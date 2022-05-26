@@ -4,6 +4,7 @@ import WatchListContext from "../context/WatchListContext";
 import MovieModel from "../models/MovieModel";
 import "./Movie.css";
 import Stars from "./Stars";
+import defaultImg from "../assets/default.jpg";
 
 interface Props {
   movie: MovieModel;
@@ -16,10 +17,15 @@ const Movie = ({ movie }: Props) => {
   const isWatchList: boolean = isOnWatchList(movie.id);
   return (
     <li className="Movie">
-      <img
-        src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-        alt={movie.title}
-      />
+      {movie.poster_path ? (
+        <img
+          src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+          alt={movie.title}
+        />
+      ) : (
+        <img src={defaultImg} alt={movie.title} />
+      )}
+
       <Link to={`/details/${movie.id}`}>
         <h2>{movie.title}</h2>
       </Link>

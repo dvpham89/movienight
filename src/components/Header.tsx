@@ -6,7 +6,6 @@ const Header = () => {
   const navigate = useNavigate();
   const goHome = () => {
     navigate("/");
-    window.location.reload();
   };
   return (
     <header className="Header">
