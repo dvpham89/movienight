@@ -55,6 +55,7 @@ const SearchForm = ({
             id="search"
             onChange={(e) => setSearch(e.target.value)}
             value={search}
+            placeholder="Search by Title"
           />
           <button>Search</button>
         </div>
@@ -62,6 +63,7 @@ const SearchForm = ({
       {inputType === "ratingDate" && (
         <div>
           <select
+            className="dropDown"
             name="rating"
             id="rating"
             onChange={(e) => setSearchRating(e.target.value)}

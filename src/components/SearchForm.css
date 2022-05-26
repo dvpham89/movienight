@@ -6,7 +6,7 @@
 .SearchForm p {
   background-color: lightseagreen;
   border: 2px solid white;
-  margin: 2px;
+  margin: 3px;
   padding: 5px;
   border-radius: 5px;
 }
@@ -23,19 +23,25 @@
 
 .SearchForm .filterBy {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+}
+
+.SearchForm .dropDown {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 1px;
 }
 
 .SearchForm input {
   border-radius: 5px;
-  padding: 3px;
-  margin-left: 3px;
+  padding: 5px;
+  margin: 1px;
 }
 
 .SearchForm button {
   border-radius: 5px;
-  padding: 3px;
-  margin-left: 3px;
+  padding: 5px;
+  margin: 1px;
 }
 
 .SearchForm button:hover {
