@@ -15,7 +15,7 @@
 }
 
 .Movie .addWL {
-  color: lightgreen;
+  color: lightseagreen;
 }
 
 .Movie .removeWL {
@@ -24,6 +24,6 @@
 
 .Movie a:hover,
 .Movie i:hover {
-  color: lightskyblue;
+  color: dodgerblue;
   cursor: pointer;
 }

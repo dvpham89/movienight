@@ -39,17 +39,21 @@
 }
 
 .Details .addWL {
-  color: lightgreen;
+  font-size: 24px;
+  font-weight: bold;
+  color: lightseagreen;
   margin: 10px;
 }
 
 .Details .removeWL {
+  font-size: 24px;
+  font-weight: bold;
   color: lightcoral;
   margin: 10px;
 }
 
 .Details a:hover,
 .Details i:hover {
-  color: lightskyblue;
+  color: dodgerblue;
   cursor: pointer;
 }
